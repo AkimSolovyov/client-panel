@@ -24,7 +24,7 @@
           [ngClass]="{'is-invalid':clientFirstName.errors && clientFirstName.touched}"
           name="firstName"
           #clientFirstName="ngModel"
-          [(ngModel)]="firstName"
+          [(ngModel)]="client.firstName"
           minlength="2"
           required
         >
@@ -44,7 +44,7 @@
           [ngClass]="{'is-invalid':clientLastName.errors && clientLastName.touched}"
           name="lastName"
           #clientLastName="ngModel"
-          [(ngModel)]="lastName"
+          [(ngModel)]="client.lastName"
           minlength="2"
           required
         >
@@ -64,7 +64,7 @@
           [ngClass]="{'is-invalid':clientEmail.errors && clientEmail.touched}"
           name="email"
           #clientEmail="ngModel"
-          [(ngModel)]="email"
+          [(ngModel)]="client.email"
           pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
           required
         >
@@ -84,7 +84,7 @@
           [ngClass]="{'is-invalid':clientPhone.errors && clientPhone.touched}"
           name="phone"
           #clientPhone="ngModel"
-          [(ngModel)]="phone"
+          [(ngModel)]="client.phone"
           minlength="10"
           required
         >
