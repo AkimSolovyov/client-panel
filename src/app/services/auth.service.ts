@@ -19,6 +19,15 @@ export class AuthService {
     });
   }
 
+  register(email: string, password: string) {
+    return new Promise((resolved, reject) => {
+      this.afAuth.auth.createUserWithEmailAndPassword(email, password)
+        .then(userData => resolved(userData),
+          err => reject(err)
+        );
+    });
+  }
+
   getAuth() {
     return this.afAuth.authState.map(auth => auth);
   }
